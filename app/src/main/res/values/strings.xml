@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestAppTryOut</string>
+    <string name="auth_token_pref">auth_token</string>
+    <string name="preference_file_key">TestAppTryOut</string>
+</resources>
