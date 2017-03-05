@@ -7,6 +7,9 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class UserInfo {
+    @SerializedName("id")
+    String id;
+
     @SerializedName("displayName")
     String displayName;
 

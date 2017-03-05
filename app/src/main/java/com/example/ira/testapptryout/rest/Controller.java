@@ -32,21 +32,22 @@ public class Controller {
     User user_with_email = new User("baa@mail.com", "pass1");
 
     public void login() {
-//        Call<AuthToken> call = api.log_in(user_with_email);
+        Call<AuthToken> call = api.log_in(user_with_email);
 //        try {
-//            AuthToken t = call.execute().body();
-//            Log.v("Token-success", t.getToken());
-//            prefs.setAuthToken(t.getToken());
+//
+//            AuthToken token = call.execute().body();
+//            prefs.removeAuthToken();
+//            prefs.setAuthToken("Bearer " + token.getToken());
 //        } catch (Exception e) {
 //            Log.v("Token-error", e.toString());
 //        }
-        Call<AuthToken> call = api.log_in(user_with_email);
         call.enqueue(new Callback<AuthToken>() {
             @Override
             public void onResponse(Call<AuthToken> token, Response<AuthToken> response) {
                 if (response.isSuccessful()) {
                     AuthToken t = response.body();
                     Log.v("Token-success", t.getToken());
+//                    prefs.removeAuthToken();
                     prefs.setAuthToken("Bearer " + t.getToken());
 
                 } else {

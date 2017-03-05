@@ -1,8 +1,9 @@
-package com.example.ira.testapptryout;
+package com.example.ira.testapptryout.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.ira.testapptryout.R;
 import com.example.ira.testapptryout.rest.Controller;
 
 public class ProfileActivity extends AppCompatActivity {

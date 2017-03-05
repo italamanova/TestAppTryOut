@@ -38,7 +38,7 @@ public class RetrofitClient {
         Interceptor interceptor = new Interceptor() {
             @Override
             public okhttp3.Response intercept(Chain chain) throws IOException {
-                String credentials = String.format("%smat", prefs.getAuthToken());
+                String credentials = String.format("%s", prefs.getAuthToken());
                 Log.v(TAG, credentials);
                 Request newRequest = chain.request().newBuilder()
                         .addHeader("Authorization", credentials)
